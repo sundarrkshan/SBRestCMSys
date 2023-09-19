@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamAPI {
@@ -20,6 +21,6 @@ public class StreamAPI {
          StreamAPI streamAPI = new StreamAPI();
                 //    list = (List<String>) streamAPI.streamOf(list);
         Stream<String> listCheck =  streamAPI.streamOf(list);
-        System.out.println("Is Empty List:"+listCheck.toList());
+        System.out.println("Is Empty List:"+listCheck.collect(Collectors.toList()));
     }
 }
